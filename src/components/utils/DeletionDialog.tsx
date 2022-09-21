@@ -8,7 +8,6 @@ import {
   Slide,
 } from "@mui/material";
 import { Dispatch, forwardRef, SetStateAction } from "react";
-import { useCtx } from "../../context/Provider";
 import { todosObj } from "../../utils/types";
 
 const Transition = forwardRef(function Transition(props, ref) {
@@ -30,8 +29,6 @@ export const DeletionDialog = ({
   todos,
   setTodos,
 }: propsType) => {
-  const { setSnackBarOpen } = useCtx();
-
   return (
     <Dialog
       open={showDeleteDialog}
